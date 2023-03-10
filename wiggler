@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+import pyautogui
+import time
+from datetime import datetime
+#pyautogui.FAILSAFE=False
+x=59.97
+debugger=True
+def TRAMPSTAMP():
+	now = datetime.now()
+	date_time = now.strftime("%Y%m%d@%H:%M:%S")
+	return date_time
+while True:
+	if (debugger == True):
+		print("Wiggling: ", TRAMPSTAMP())
+	pyautogui.move(0, 1, .01)
+	pyautogui.move(-1, -1, .01)
+	pyautogui.move(1, 0, .01)
+	time.sleep(x)
